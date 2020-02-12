@@ -1,0 +1,11 @@
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\bin\Debug\netcoreapp3.1\MVCCountries.exe
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\bin\Debug\netcoreapp3.1\MVCCountries.deps.json
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\bin\Debug\netcoreapp3.1\MVCCountries.runtimeconfig.json
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\bin\Debug\netcoreapp3.1\MVCCountries.runtimeconfig.dev.json
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\bin\Debug\netcoreapp3.1\MVCCountries.dll
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\bin\Debug\netcoreapp3.1\MVCCountries.pdb
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\obj\Debug\netcoreapp3.1\MVCCountries.csprojAssemblyReference.cache
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\obj\Debug\netcoreapp3.1\MVCCountries.AssemblyInfoInputs.cache
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\obj\Debug\netcoreapp3.1\MVCCountries.AssemblyInfo.cs
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\obj\Debug\netcoreapp3.1\MVCCountries.dll
+C:\Users\Frost\source\repos\MVCCountries\MVCCountries\obj\Debug\netcoreapp3.1\MVCCountries.pdb
