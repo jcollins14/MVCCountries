@@ -14,6 +14,7 @@ namespace MVCCountries
         }
         public void Display()
         {
+            //loops through the Country List and displays each country along with a selection integer
             for (int i = 0; i < Countries.Count; i++)
             {
                 Country a = Countries[i];

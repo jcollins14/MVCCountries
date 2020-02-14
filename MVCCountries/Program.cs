@@ -6,6 +6,7 @@ namespace MVCCountries
     {
         static void Main(string[] args)
         {
+            //instantiates the CountryController class and starts its actions
             CountryController app = new CountryController();
 
             app.WelcomeAction();

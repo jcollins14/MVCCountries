@@ -19,12 +19,15 @@ namespace MVCCountries
             Console.WriteLine("Continent: " + DisplayCountry.Continent);
 
             Console.WriteLine("Colors: ");
+
+            //loop to check the color of the country against the items stored in ConsoleColor
             foreach (string color in DisplayCountry.Colors)
             {
                 foreach (ConsoleColor console in Enum.GetValues(typeof(ConsoleColor)))
                 {
                     string compare = console.ToString();
-                    
+                    //sets the text color to the countries color if it matches
+                    //also sets the background to white if the color is black for readability
                     if (compare.Equals(color))
                     {
                         Console.ForegroundColor = console;
@@ -35,6 +38,7 @@ namespace MVCCountries
                     }
                 }
                 Console.WriteLine(color);
+                //resets the color back to default black/grey
                 Console.BackgroundColor = ConsoleColor.Black;
 
             }
