@@ -21,13 +21,24 @@ namespace MVCCountries
             Console.WriteLine("Colors: ");
             foreach (string color in DisplayCountry.Colors)
             {
-                //foreach (ConsoleColor console in Enum.GetValues(typeof(ConsoleColor)))
-                //{
-                //        Console.ForegroundColor = Enum.TryParse(ConsoleColor, color);
-                //}
+                foreach (ConsoleColor console in Enum.GetValues(typeof(ConsoleColor)))
+                {
+                    string compare = console.ToString();
+                    
+                    if (compare.Equals(color))
+                    {
+                        Console.ForegroundColor = console;
+                    }
+                    if (color == "Black")
+                    {
+                        Console.BackgroundColor = ConsoleColor.White;
+                    }
+                }
                 Console.WriteLine(color);
+                Console.BackgroundColor = ConsoleColor.Black;
+
             }
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
         }
     }

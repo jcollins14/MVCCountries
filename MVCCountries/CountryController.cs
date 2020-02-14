@@ -45,7 +45,42 @@ namespace MVCCountries
                 Continent = "Australia",
                 Colors = new List<string> { "Red", "White", "Blue" }
             }
-              );
+            );
+            CountryDB.Add(new Country()
+            {
+                Name = "Germany",
+                Continent = "Europe",
+                Colors = new List<string> { "Red", "Black", "Yellow" }
+            }
+            );
+            CountryDB.Add(new Country()
+            {
+                Name = "Greece",
+                Continent = "Europe",
+                Colors = new List<string> { "White", "Blue" }
+            }
+            );
+            CountryDB.Add(new Country()
+            {
+                Name = "Mongolia",
+                Continent = "Asia",
+                Colors = new List<string> { "Red", "Blue", "Red" }
+            }
+            );
+            CountryDB.Add(new Country()
+            {
+                Name = "Canada",
+                Continent = "North America",
+                Colors = new List<string> { "Red", "White" }
+            }
+            );
+            CountryDB.Add(new Country()
+            {
+                Name = "Congo",
+                Continent = "Africa",
+                Colors = new List<string> { "Red", "Yellow" , "Green" }
+            }
+  );
 
         }
 
@@ -62,23 +97,45 @@ namespace MVCCountries
             
 
             Console.WriteLine("Hello, Welcome to the Country App. Please select a Country from the following list:");
+            Console.WriteLine("===================================================================================");
+            Console.WriteLine();
 
             while (loop)
             {
                 int answer = 0;
                 listview.Display();
+                Console.WriteLine();
                 Console.WriteLine("Please enter the integer of the country you would like to select.");
 
-                while (answer == 0 && answer < CountryDB.Count)
+                string input = "error";
+                while (input == "error")
                 {
+                    input = Console.ReadLine().Trim();
                     try
                     {
-                        answer = int.Parse(Console.ReadLine().Trim());
+                        answer = int.Parse(input);
                     }
                     catch (FormatException)
                     {
                         Console.WriteLine("Please enter only valid integers.");
+                        input = "error";
                     }
+
+                    
+                    if (answer == 0 || answer > CountryDB.Count)
+                    {
+                        try
+                        {
+                            Country b = CountryDB[answer];
+                        }
+                        catch (ArgumentOutOfRangeException)
+                        {
+                            Console.WriteLine("Please select a valid option.");
+                            input = "error";
+                        }
+
+                    }
+
                 }
 
                 answer--;
@@ -86,13 +143,30 @@ namespace MVCCountries
                 Console.WriteLine();
                 CountryAction(a);
                
-                Console.WriteLine("Would you like to learn about another country? Type No to Exit");
+                Console.WriteLine("Would you like to learn about another country? (Yes/No)");
                 string response = "";
-                response = Console.ReadLine().ToLower().Trim();
-                if (response == "no")
+           
+                while (response == "")
                 {
-                    loop = false;
+                    response = Console.ReadLine().ToLower().Trim();
+                    if (response == "no")
+                    {
+                        loop = false;
+                        Console.WriteLine("Thank you for using the Country App. Goodbye.");
+                        Environment.Exit(1);
+                    }
+                    else if (response != "yes")
+                    {
+                        Console.WriteLine("Please select yes or no.");
+                        Console.WriteLine();
+                        response = "";
+                    }
+
                 }
+
+                Console.Clear();
+                Console.WriteLine("Hello, Welcome to the Country App. Please select a Country from the following list:");
+                Console.WriteLine("===================================================================================");
                 Console.WriteLine();
             }
         }
