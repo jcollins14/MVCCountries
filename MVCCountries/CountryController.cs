@@ -160,8 +160,9 @@ namespace MVCCountries
                         input = "error";
                     }
 
-                    
-                    if (answer == 0 || answer > CountryDB.Count)
+                    answer--;
+
+                    if (answer < 0 || answer > CountryDB.Count)
                     {
                         try
                         {
@@ -178,7 +179,7 @@ namespace MVCCountries
                 }
 
                 //takes user input, corrects to actual index number, and calls CountryAction to display selected Country
-                answer--;
+
                 Country a = CountryDB[answer];
                 Console.WriteLine();
                 CountryAction(a);
